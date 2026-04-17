@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hossam | Marvel Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <h1>MARVEL PORTFOLIO</h1>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Welcome To<br><span>My Universe</span></h1>
+    <p>Web Developer • Designer • Editor • Marketer</p>
+    <button class="enter-btn" id="enter-btn">Enter My World</button>
+  </div>
+
+  <div class="hero-image">
+    <div class="hero-media">
+      <img src="profile/551999635_1426377929494593_171673185209890151_n.jpg" alt="My Photo">
+
+      <a class="cv-dock" href="C.V/Hossam_Ehab_Professional_CV.pdf" target="_blank" aria-label="Open CV">
+        <span class="cv-icon" aria-hidden="true">🧾</span>
+        <span class="cv-text">C.V</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="origin-story" class="about">
+  <h2>My Origin Story</h2>
+  <p>
+    I craft digital experiences that don’t just work—they feel cinematic. From designing sleek interfaces
+    to coding seamless websites, editing visuals that tell a story, and marketing ideas that connect with people,
+    I turn concepts into experiences that stick.
+    Skills:
+    Web Development • UX/UI Design • Video Editing • Digital Marketing
+    What I Bring:
+    I blend creativity with strategy to deliver projects that look amazing, function flawlessly, and get results.
+    If you want more than just a website or a campaign—you want an experience—let’s make it happen.
+  </p>
+</section>
+
+<!-- POWERS -->
+<section class="powers">
+  <h2>My Powers</h2>
+  <div class="power-grid">
+    <div class="power-card" data-target="web-development">Web Design & Development</div>
+    <div class="power-card" data-target="graphic-design">Graphic Design</div>
+    <div class="power-card" data-target="video-editing">Video Editing</div>
+    <div class="power-card" data-target="marketing">Digital Marketing</div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio">
+  <h2>My Missions</h2>
+
+  <!-- Web Development -->
+  <div class="portfolio-section" id="web-development">
+    <h3>Web Development</h3>
+
+    <div class="slider">
+      <button class="nav prev" aria-label="Previous">‹</button>
+
+      <div class="cards slider-track">
+        <!-- ✅ PDF Cards -> PDF MODAL -->
+        <a href="https://hossammarvel.github.io/LYALI-Cafe/" class="card pdf-card" data-pdf="https://hossammarvel.github.io/LYALI-Cafe/" data-bg="/WEB DEVELOPMENT/Website 1.png" aria-label="Open Website 1 PDF">
+          <img src="/WEB DEVELOPMENT/Website 1.png" alt="Website 1">
+        </a>
+
+       <a href="https://car-website-dxdp.vercel.app/" class="card pdf-card" data-pdf="https://car-website-dxdp.vercel.app/" data-bg="/WEB DEVELOPMENT/Website 2.png" aria-label="Open Website 2 PDF">
+          <img src="/WEB DEVELOPMENT/Website 2.png" alt="Website 2">
+        </a>
+
+        <a href="https://hossammarvel.github.io/QuickThink/index.html" class="card pdf-card" data-pdf="https://hossammarvel.github.io/QuickThink/index.html" data-bg="/WEB DEVELOPMENT/Website 3.png" aria-label="Open Website 3 PDF">
+          <img src="/WEB DEVELOPMENT/Website 3.png" alt="Website 3">
+        </a>
+
+        <a href="https://hossammarvel.github.io/Marvelous-Store/" class="card pdf-card" data-pdf="https://hossammarvel.github.io/Marvelous-Store/" data-bg="/WEB DEVELOPMENT/Website 4.png" aria-label="Open Website 4 PDF">
+          <img src="/WEB DEVELOPMENT/Website 4.png" alt="Website 4">
+        </a>
+
+        <a href="https://hossammarvel.github.io/BubbleBonanza/" class="card pdf-card" data-pdf="https://hossammarvel.github.io/BubbleBonanza/" data-bg="/WEB DEVELOPMENT/Website 5.png" aria-label="Open Website 5 PDF">
+          <img src="/WEB DEVELOPMENT/Website 5.png" alt="Website 5">
+        </a>
+      </div>
+
+      <button class="nav next" aria-label="Next">›</button>
+    </div>
+  </div>
+
+  <!-- Graphic Design -->
+  <div class="portfolio-section" id="graphic-design">
+    <h3>Graphic Design</h3>
+
+    <div class="slider">
+      <button class="nav prev" aria-label="Previous">‹</button>
+
+      <div class="cards slider-track">
+        <!-- ✅ Image Cards -> IMAGE MODAL -->
+        <a href="#" class="card image-card" data-image="/Graghic Design/Design 1/thumbnail الجزء الاول من تومب رايدر.png" data-bg="/Graghic Design/design 1.png" aria-label="Open Design 1">
+          <img src="/Graghic Design/design 1.png" alt="Design 1">
+        </a>
+
+        <a href="#" class="card image-card" data-image="/Graghic Design/Design 2/يلا لايف قبل الفطار.png" data-bg="/Graghic Design/design 2.png" aria-label="Open Design 2">
+          <img src="/Graghic Design/design 2.png" alt="Design 2">
+        </a>
+
+        <a href="#" class="card image-card" data-image="/Graghic Design/Design 3/thumbnail live youtube.png" data-bg="/Graghic Design/design 3.png" aria-label="Open Design 3">
+          <img src="/Graghic Design/design 3.png" alt="Design 3">
+        </a>
+
+        <a href="#" class="card image-card" data-image="/Graghic Design/Design 4/يلا قبل السحور.png" data-bg="/Graghic Design/design 4.png" aria-label="Open Design 4">
+          <img src="/Graghic Design/design 4.png" alt="Design 4">
+        </a>
+
+        <a href="#" class="card image-card" data-image="/Graghic Design/Design 5/image.jpg" data-bg="/Graghic Design/design 5.png" aria-label="Open Design 5">
+          <img src="/Graghic Design/design 5.png" alt="Design 5">
+        </a>
+
+        <a href="#" class="card image-card" data-image="/Graghic Design/Design 6/thumbnail صياح فالور رمضان كريم.png" data-bg="/Graghic Design/Design 6/thumbnail صياح فالور رمضان كريم.png" aria-label="Open Design 6">
+          <img src="/Graghic Design/design 6.png" alt="Design 6">
+        </a>
+
+        <a href="#" class="card image-card" data-image="/Graghic Design/Design 7/عودة الاسطورة.png" data-bg="/Graghic Design/Design 7/عودة الاسطورة.png" aria-label="Open Design 7">
+          <img src="/Graghic Design/design 7.png" alt="Design 7">
+        </a>
+
+        <a href="#" class="card image-card" data-image="/Graghic Design/Design 8/320 EG (3).png" data-bg="/Graghic Design/design 6.png" aria-label="Open Design 8">
+          <img src="/Graghic Design/design 8.png" alt="Design 8">
+        </a>
+
+        <a href="#" class="card image-card" data-image="/Graghic Design/Design 9/اسنان اقوى من الحديد.png" data-bg="/Graghic Design/Design 9/اسنان اقوى من الحديد.png" aria-label="Open Design 9">
+          <img src="/Graghic Design/design 9.png" alt="Design 9">
+        </a>
+
+        <a href="#" class="card image-card" data-image="/Graghic Design/Design 10/فيراري.png" data-bg="/Graghic Design/Design 10/فيراري.png" aria-label="Open Design 10">
+          <img src="/Graghic Design/design 10.png" alt="Design 10">
+        </a>
+      </div>
+
+      <button class="nav next" aria-label="Next">›</button>
+    </div>
+  </div>
+
+  <!-- ✅ Video Editing (MP4 -> VIDEO MODAL) -->
+  <div class="portfolio-section" id="video-editing">
+    <h3>Video Editing</h3>
+
+    <div class="slider">
+      <button class="nav prev" aria-label="Previous">‹</button>
+
+      <div class="cards slider-track">
+        <a href="#" class="card video-card" data-bg="/Video editing/edits/Edit 01.png" data-missing-video="true" aria-label="Open Edit 1">
+          <img src="/Video editing/edits/Edit 01.png" alt="Edit 1">
+        </a>
+
+        <a href="/Video editing/edits/edit 2/Cima-Now_CoM_Fi_Lahza_S01E23_HD-720p.mp4" class="card video-card" data-bg="/Video editing/edits/Edit 02.png" aria-label="Open Edit 2">
+          <img src="/Video editing/edits/Edit 02.png" alt="Edit 2">
+        </a>
+
+        <a href="/Video editing/edits/edit 3/kan w kan.mp4" class="card video-card" data-bg="/Video editing/edits/Edit 03.png" aria-label="Open Edit 3">
+          <img src="/Video editing/edits/Edit 03.png" alt="Edit 3">
+        </a>
+
+        <a href="/Video editing/edits/edit 4/sahby ya sahby.mp4" class="card video-card" data-bg="/Video editing/edits/Edit 04.png" aria-label="Open Edit 4">
+          <img src="/Video editing/edits/Edit 04.png" alt="Edit 4">
+        </a>
+
+        <a href="/Video editing/edits/edit 5/شجرة الليمون.mp4" class="card video-card" data-bg="/Video editing/edits/Edit 05.png" aria-label="Open Edit 5">
+          <img src="/Video editing/edits/Edit 05.png" alt="Edit 5">
+        </a>
+
+        <a href="#" class="card video-card" data-bg="/Video editing/edits/Edit 06.png" data-missing-video="true" aria-label="Open Edit 6">
+          <img src="/Video editing/edits/Edit 06.png" alt="Edit 6">
+        </a>
+
+        <a href="/Video editing/edits/edit 7/قصة حب حقيقية  قرار الشجاعة في مواجهة الألم م.mp4" class="card video-card" data-bg="/Video editing/edits/Edit 07.png" aria-label="Open Edit 7">
+          <img src="/Video editing/edits/Edit 07.png" alt="Edit 7">
+        </a>
+
+        <a href="/Video editing/edits/edit 8/كونان الركلة.mp4" class="card video-card" data-bg="/Video editing/edits/Edit 08.png" aria-label="Open Edit 8">
+          <img src="/Video editing/edits/Edit 08.png" alt="Edit 8">
+        </a>
+
+      </div>
+
+      <button class="nav next" aria-label="Next">›</button>
+    </div>
+  </div>
+
+  <!-- Marketing -->
+  <div class="portfolio-section" id="marketing">
+    <h3>Marketing</h3>
+
+    <div class="slider">
+      <button class="nav prev" aria-label="Previous">‹</button>
+
+      <div class="cards slider-track">
+        <!-- ✅ PDF Cards -> PDF MODAL -->
+        <a href="/marketing/campagins/Campagin 1/Presentation - إعلانات فيسبوك -steam=39.pdf"
+           class="card pdf-card"
+           data-pdf="/marketing/campagins/Campagin 1/Presentation - إعلانات فيسبوك -steam=39.pdf"
+           data-bg="/marketing/campagins/campagin1.png"
+           aria-label="Open Campaign 1 PDF">
+          <img src="/marketing/campagins/campagin1.png" alt="Campaign 1">
+        </a>
+
+        <a href="/marketing/campagins/Campagin 2/Presentation - Fashion Brand Launch Strategy.pdf"
+           class="card pdf-card"
+           data-pdf="/marketing/campagins/Campagin 2/Presentation - Fashion Brand Launch Strategy.pdf"
+           data-bg="/marketing/campagins/campagin2.png"
+           aria-label="Open Campaign 2 PDF">
+          <img src="/marketing/campagins/campagin2.png" alt="Campaign 2">
+        </a>
+
+        <a href="/marketing/campagins/Campagin 3/Presentation - Ramadan Campaign.pdf" class="card pdf-card" data-pdf="/marketing/campagins/Campagin 3/Presentation - Ramadan Campaign.pdf" data-bg="/marketing/campagins/campagin3.png" aria-label="Open Campaign 3 PDF">
+          <img src="/marketing/campagins/campagin3.png" alt="Campaign 3">
+        </a>
+
+        <a href="/marketing/campagins/Campagin 4/Presentation - Steam Games.pdf" class="card pdf-card" data-pdf="/marketing/campagins/Campagin 4/Presentation - Steam Games.pdf" data-bg="/marketing/campagins/campagin4.png" aria-label="Open Campaign 4 PDF">
+          <img src="/marketing/campagins/campagin4.png" alt="Campaign 4">
+        </a>
+
+        <a href="/marketing/campagins/Campagin 5/Presentation - Steam Gift Cards.pdf" class="card pdf-card" data-pdf="/marketing/campagins/Campagin 5/Presentation - Steam Gift Cards.pdf" data-bg="/marketing/campagins/campagin5.png" aria-label="Open Campaign 5 PDF">
+          <img src="/marketing/campagins/campagin5.png" alt="Campaign 5">
+        </a>
+      </div>
+
+      <button class="nav next" aria-label="Next">›</button>
+    </div>
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <a href="https://wa.me/201550591923" class="contact-title">
+    <h2>Contact The Hero</h2>
+  </a>
+  <p>Ready to start a new mission together?</p>
+</section>
+
+<!-- MUSIC CONTROL -->
+<audio id="bg-music" src="theme song/SPIDY.mp3" loop></audio>
+
+<div id="music-container">
+  <button id="music-btn" class="music-btn" aria-label="Toggle sound" aria-pressed="false">
+    <span class="icon icon-volume" aria-hidden="true">
+      <svg viewBox="0 0 24 24" class="svg">
+        <path d="M11 5 6.5 9H3v6h3.5L11 19V5z"></path>
+        <path class="wave wave1" d="M14.5 8.5a4.5 4.5 0 0 1 0 7"></path>
+        <path class="wave wave2" d="M16.7 6.3a7.5 7.5 0 0 1 0 11.4"></path>
+      </svg>
+    </span>
+
+    <span class="icon icon-mute" aria-hidden="true">
+      <svg viewBox="0 0 24 24" class="svg">
+        <path d="M11 5 6.5 9H3v6h3.5L11 19V5z"></path>
+        <path class="x" d="M16 9l5 6M21 9l-5 6"></path>
+      </svg>
+    </span>
+  </button>
+</div>
+
+<!-- ✅ VIDEO MODAL -->
+<div id="video-modal" class="vmodal" aria-hidden="true">
+  <div class="vmodal__bg" id="vmodal-bg"></div>
+
+  <div class="vmodal__content" role="dialog" aria-modal="true" aria-label="Video preview">
+    <button class="vmodal__close" id="vmodal-close" aria-label="Close">✕</button>
+
+    <div class="vmodal__frame">
+      <video id="vmodal-video" controls playsinline></video>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ PDF MODAL -->
+<div id="pdf-modal" class="pmodal" aria-hidden="true">
+  <div class="pmodal__bg" id="pmodal-bg"></div>
+
+  <div class="pmodal__content" role="dialog" aria-modal="true" aria-label="PDF preview">
+    <button class="pmodal__close" id="pmodal-close" aria-label="Close">✕</button>
+
+    <div class="pmodal__frame">
+      <iframe id="pmodal-iframe" title="PDF Preview"></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ IMAGE MODAL -->
+<div id="image-modal" class="imodal" aria-hidden="true">
+  <div class="imodal__bg" id="imodal-bg"></div>
+
+  <div class="imodal__content" role="dialog" aria-modal="true" aria-label="Image preview">
+    <button class="imodal__close" id="imodal-close" aria-label="Close">✕</button>
+
+    <div class="imodal__frame">
+      <img id="imodal-image" alt="Design preview">
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
