@@ -487,12 +487,11 @@ p {
 
   .portfolio-section {
     margin-top: 42px;
-    padding-bottom: 32px;
   }
 
   .slider {
     margin-top: 18px;
-    padding-bottom: 84px;
+    padding-bottom: 0;
   }
 
   .slider-track{
@@ -505,23 +504,7 @@ p {
   }
 
   .slider .nav{
-    top: auto;
-    bottom: var(--slider-mobile-nav-bottom);
-    transform: none;
-    width: var(--slider-mobile-nav-size);
-    height: var(--slider-mobile-nav-size);
-    font-size: 22px;
-  }
-
-  .slider .nav:hover{
-    transform: scale(1.05);
-  }
-
-  .slider .prev{
-    left: calc(50% - var(--slider-mobile-nav-size) - (var(--slider-mobile-nav-gap) / 2));
-  }
-  .slider .next{
-    right: calc(50% - var(--slider-mobile-nav-size) - (var(--slider-mobile-nav-gap) / 2));
+    display: none;
   }
 
   .contact-title h2 {
