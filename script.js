@@ -198,7 +198,8 @@ document.querySelectorAll('.slider').forEach(slider => {
   function cardStep(){
     const card = track.querySelector('.card');
     if (!card) return 300;
-    const gap = 20;
+    const styles = window.getComputedStyle(track);
+    const gap = parseFloat(styles.columnGap || styles.gap || '0') || 0;
     return card.getBoundingClientRect().width + gap;
   }
 
