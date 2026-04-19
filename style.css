@@ -490,6 +490,14 @@ h1, h2, h3 {
   display: block;
 }
 
+#vmodal-iframe{
+  width: 100%;
+  height: min(78vh, 820px);
+  border: 0;
+  display: none;
+  background: #000;
+}
+
 .vmodal__close{
   position: absolute;
   top: 10px;

@@ -239,7 +239,74 @@ document.querySelectorAll('.slider').forEach(slider => {
 const vmodal = document.getElementById('video-modal');
 const vmodalBg = document.getElementById('vmodal-bg');
 const vmodalVideo = document.getElementById('vmodal-video');
+const vmodalIframe = document.getElementById('vmodal-iframe');
 const vmodalClose = document.getElementById('vmodal-close');
+
+function getTikTokEmbedUrl(videoSrc){
+  if (!videoSrc) return null;
+
+  try {
+    const url = new URL(videoSrc, window.location.origin);
+
+    if (!/tiktok\.com$/i.test(url.hostname) && !/\.tiktok\.com$/i.test(url.hostname)) {
+      return null;
+    }
+
+    const embedMatch = url.pathname.match(/\/embed(?:\/v2)?\/(\d+)/i);
+    if (embedMatch) {
+      return `https://www.tiktok.com/embed/v2/${embedMatch[1]}`;
+    }
+
+    const videoMatch = url.pathname.match(/\/video\/(\d+)/i);
+    if (videoMatch) {
+      return `https://www.tiktok.com/embed/v2/${videoMatch[1]}`;
+    }
+  } catch (_) {
+    return null;
+  }
+
+  return null;
+}
+
+function getYouTubeEmbedUrl(videoSrc) {
+  if (!videoSrc) return null;
+
+  try {
+    const url = new URL(videoSrc, window.location.origin);
+    const host = url.hostname.toLowerCase();
+
+    if (host === 'youtu.be') {
+      const videoId = url.pathname.split('/').filter(Boolean)[0];
+      return videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0` : null;
+    }
+
+    if (host === 'youtube.com' || host === 'www.youtube.com' || host === 'm.youtube.com') {
+      if (url.pathname === '/watch') {
+        const videoId = url.searchParams.get('v');
+        return videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0` : null;
+      }
+
+      const embedMatch = url.pathname.match(/\/embed\/([^/?]+)/i);
+      if (embedMatch) {
+        return `https://www.youtube.com/embed/${embedMatch[1]}?autoplay=1&rel=0`;
+      }
+    }
+  } catch (_) {
+    return null;
+  }
+
+  return null;
+}
+
+function resetVideoModalMedia() {
+  vmodalVideo.pause();
+  vmodalVideo.removeAttribute('src');
+  vmodalVideo.load();
+  vmodalVideo.style.display = 'none';
+
+  vmodalIframe.src = '';
+  vmodalIframe.style.display = 'none';
+}
 
 function openVideoModal(videoSrc, bgSrc){
   vmodal.classList.add('is-open');
@@ -247,10 +314,20 @@ function openVideoModal(videoSrc, bgSrc){
 
   vmodalBg.style.backgroundImage = `url("${bgSrc || ''}")`;
 
-  vmodalVideo.src = videoSrc;
-  vmodalVideo.currentTime = 0;
+  resetVideoModalMedia();
 
-  vmodalVideo.play().catch(()=>{});
+  const embedUrl = getTikTokEmbedUrl(videoSrc) || getYouTubeEmbedUrl(videoSrc);
+
+  if (embedUrl) {
+    vmodalIframe.src = embedUrl;
+    vmodalIframe.style.display = 'block';
+  } else {
+    vmodalVideo.src = videoSrc;
+    vmodalVideo.currentTime = 0;
+    vmodalVideo.style.display = 'block';
+
+    vmodalVideo.play().catch(()=>{});
+  }
   document.body.style.overflow = 'hidden';
 }
 
@@ -258,10 +335,7 @@ function closeVideoModal(){
   vmodal.classList.remove('is-open');
   vmodal.setAttribute('aria-hidden', 'true');
 
-  vmodalVideo.pause();
-  vmodalVideo.removeAttribute('src');
-  vmodalVideo.load();
-
+  resetVideoModalMedia();
   vmodalBg.style.backgroundImage = '';
   document.body.style.overflow = '';
 }
